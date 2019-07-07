@@ -26,7 +26,6 @@ namespace DddMelb2019.Web.Pages
                 return Redirect("/");
 
             Cast = movieSiteContext.MovieCastMembers.Where(x => x.MovieId == movieId).Select(x => x.CastMember).ToList();
-
             return Page();
         }
     }
