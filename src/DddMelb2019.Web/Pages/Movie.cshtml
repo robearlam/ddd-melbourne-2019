@@ -1,0 +1,38 @@
+@page "{movieId}"
+@model MovieModel
+@{
+    ViewData["Title"] = "Robs Movie List";
+}
+
+<div class="row">
+    <h1 class="display-1">@Model.Movie.Title</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+                <img src="@Model.Movie.ImageUrl" class="img-thumbnail" alt="@Model.Movie.Title poster" />
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <p>Released: @Model.Movie.DateOfRelease.ToString("dd MMM yyyy")</p>
+            </div>
+            <div class="row">
+                <p><a href="@Model.Movie.ImdbUrl">IMDB</a></p>
+            </div>
+            <div class="row">
+                @foreach (var castMember in Model.Cast)
+                {
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="@castMember.ImageUrl" class="rounded img-thumbnail" alt="@castMember.FirstName @castMember.LastName" />
+                        </div>
+                        <div class="col-6">
+                            <a href="/cast/@castMember.CastMemberId">@castMember.FirstName @castMember.LastName</a>
+                        </div>
+                    </div>
+                }
+            </div>
+            
+        </div>
+    </div>
+</div>
