@@ -8,9 +8,9 @@ services:
         volumes:
             - ./src/DddMelb2019.Web/wwwroot:/app/wwwroot
         ports:
-            - "4000:80"
+            - "4002:80"
         environment:
-            - ASPNETCORE_ENVIRONMENT=Development 
+            - ASPNETCORE_ENVIRONMENT=Release 
             - DOTNET_USE_POLLING_FILE_WATCHER=true
         depends_on:
             - db
