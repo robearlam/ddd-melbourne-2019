@@ -1,16 +1,17 @@
 version: "3"
 services:
-    web:
+    dddmelb2019:
+        container_name: dddmelb2019
         build:
           context: .
           args:
-            - buildConfig=Release
+            - buildConfig=Debug
         volumes:
             - ./src/DddMelb2019.Web/wwwroot:/app/wwwroot
         ports:
             - "4002:80"
         environment:
-            - ASPNETCORE_ENVIRONMENT=Release 
+            - ASPNETCORE_ENVIRONMENT=Development 
             - DOTNET_USE_POLLING_FILE_WATCHER=true
         depends_on:
             - db
