@@ -11,7 +11,7 @@
             },
             "pipeTransport": {
                 "pipeProgram": "docker",
-                "pipeArgs": [ "exec", "-i", "dddmelb2019" ],
+                "pipeArgs": [ "exec", "-i", "dddmelb2019_debug" ],
                 "debuggerPath": "/publish/vsdbg/vsdbg",
                 "pipeCwd": "${workspaceRoot}",
                 "quoteArgs": false

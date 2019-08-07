@@ -1,7 +1,7 @@
 version: "3"
 services:
-    dddmelb2019:
-        container_name: dddmelb2019
+    dddmelb2019_debug:
+        container_name: dddmelb2019_debug
         build:
           context: .
           args:
